@@ -6,7 +6,7 @@ struct LinkedList{
     LinkedList* next;
 };
 
-void Insert(LinkedList** LL, int new_value){
+void Insert(LinkedList** new_head, int new_value){
 
     //Initiation
     auto Node = new LinkedList();
@@ -15,10 +15,10 @@ void Insert(LinkedList** LL, int new_value){
     Node->value = new_value;
 
     //Assign the next node as head
-    Node->next = *LL;
+    Node->next = *new_head;
 
     //Point the node
-    *LL = Node;
+    *new_head = Node;
 }
 
 int main() {
