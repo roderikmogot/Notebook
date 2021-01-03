@@ -14,13 +14,10 @@ void Insert(LinkedList** new_head, int new_value){
      * Point the node
      */
     
-    //Auto can be changed to LinkedList*, (recommended to switch to auto)
+    // Auto can be changed to LinkedList*, (recommended to switch to auto)
     auto Node = new LinkedList();
-
     Node->value = new_value;
-
     Node->next = *new_head;
-
     *new_head = Node;
 }
 
