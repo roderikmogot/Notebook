@@ -8,23 +8,39 @@ struct LinkedList{
 
 void Insert(LinkedList** new_head, int new_value){
 
-    //Initiation
+    /* Initiation
+     * Assign the new value
+     * Assign the next node as head
+     * Point the node
+     */
+    
+    //Auto can be changed to LinkedList*, (recommended to switch to auto)
     auto Node = new LinkedList();
 
-    //Assign the new value
     Node->value = new_value;
 
-    //Assign the next node as head
     Node->next = *new_head;
 
-    //Point the node
     *new_head = Node;
+}
+
+void PrintLinkedList(LinkedList* LList){
+    if(LList!=nullptr){
+        PrintLinkedList(LList->next);
+        cout << LList->value << " ";
+    }
 }
 
 int main() {
     LinkedList* head = nullptr;
-    cout << "Insert a data: ";
-    int d; cin >> d;
-    Insert(&head, d);
+    
+    Insert(&head, 4);
+    Insert(&head, 5);
+    Insert(&head, 6);
+    Insert(&head, 7);
+    
+    PrintLinkedList(head);
+    
+    cout << "\n";
     return 0;
 }
