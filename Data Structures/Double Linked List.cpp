@@ -35,15 +35,6 @@ void Insert(DoubleLinkedList** new_head, int new_value){
     }
 }
 
-void Append(int new_value){
-    auto Node = new DoubleLinkedList();
-    Node->value = new_value;
-    Node->prev = nullptr;
-    Node->next = head;
-    head->prev = Node;
-    head = Node;
-}
-
 void LinearSearch(DoubleLinkedList* DLL, int key){
     while(DLL!=nullptr){
         if(key==DLL->value){cout << "exists";return;}
@@ -67,12 +58,6 @@ int main() {
     Insert(&head, 7);
     
     cout << "Linked List: ";
-    PrintDoubleLinkedList(head);
-    
-    cout << "\n";
-    
-    Append(9);
-    cout << "Linked List after appending: ";
     PrintDoubleLinkedList(head);
     
     cout << "\n";
