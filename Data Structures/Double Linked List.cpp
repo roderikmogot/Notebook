@@ -21,7 +21,7 @@ void Insert(DoubleLinkedList** new_head, int new_value){
      * Assign the new node as head
      */
     
-    // Auto can be changed to LinkedList*, (recommended switching to auto)
+    // Auto can be changed to DoubleLinkedList*, (recommended switching to auto)
     auto Node = new DoubleLinkedList();
     Node->value = new_value;
     
