@@ -57,7 +57,7 @@ int main() {
     Insert(&head, 6);
     Insert(&head, 7);
     
-    cout << "Linked List: ";
+    cout << "Double Linked List: ";
     PrintDoubleLinkedList(head);
     
     cout << "\n";
