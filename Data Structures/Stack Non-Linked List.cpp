@@ -3,7 +3,7 @@ using namespace std;
 
 template <class T>
 class Stack{
-    T *node;
+    T *arr;
     int upper, size_stack;
 
 public:
@@ -19,12 +19,12 @@ public:
     bool isEmpty();
     bool isFull();
 
-    ~Stack(){delete[] node;}
+    ~Stack(){delete[] arr;}
 };
 
 template<class T>
 Stack<T>::Stack(int sz) {
-    node = new T[sz];
+    arr = new T[sz];
     size_stack = sz;
     upper = -1;
 }
@@ -36,7 +36,7 @@ void Stack<T>::push(T t) {
         exit(EXIT_FAILURE);
     }
     cout << "Inserting " << t << "\n";
-    node[++upper] = t;
+    arr[++upper] = t;
 }
 
 template<class T>
@@ -46,7 +46,7 @@ T Stack<T>::pop() {
         exit(EXIT_FAILURE);
     }
     cout << "Removing " << peek() << "\n";
-    return node[upper--];
+    return arr[upper--];
 }
 
 template<class T>
@@ -55,7 +55,7 @@ T Stack<T>::peek() {
         cout << "Stack is empty" << "\n";
         exit(EXIT_FAILURE);
     }
-    else return node[upper];
+    else return arr[upper];
 }
 
 template<class T>
@@ -82,16 +82,16 @@ void Stack<T>::printStack() {
     }
     int i = upper;
     while(i>=0){
-        if(node[i]!=0)cout << node[i] << " ";
+        if(arr[i]!=0)cout << arr[i] << " ";
         i--;
     }
 }
 
 template<class T>
 void Stack<T>::clear() {
-    delete[] node;
+    delete[] arr;
     upper = -1;
-    node = new T[10];
+    arr = new T[10];
 }
 
 int main() {
