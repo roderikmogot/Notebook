@@ -88,10 +88,9 @@ void Queue<T>::printQueue() {
         cout << "Queue is empty";
         exit(EXIT_FAILURE);
     }
-    int i = front;
-    while(i<rear+1){
-        if(arr[i]!=0)cout << arr[i] << " ";
-        i++;
+    while(front<rear+1){
+        if(arr[front]!=0)cout << arr[front] << " ";
+        front++;
     }
 }
 
