@@ -9,7 +9,7 @@ class Testing{
 
 public class Demo extends Testing{
     public void sayHiToo(){
-        super.sayHi();      //accessing testing as the super class
+        super.sayHi();      //accessing testing instance as the super class
         System.out.println("Hi, from the other side");
     }
 
