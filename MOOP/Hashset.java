@@ -5,8 +5,7 @@ public class Main{
         Scanner input = new Scanner(System.in);
         HashSet<String> Vechiles = new HashSet<String>();
         for(int i = 0; i < 4; i++){
-            String n = input.nextLine();
-            Vechiles.add(n);
+            Vechiles.add(input.nextLine());
         }
         for(String x: Vechiles){
             System.out.println(x);
