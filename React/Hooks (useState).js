@@ -16,7 +16,8 @@ const app = props => {
     });
 
     const switchNameHandler = () => {
-            //DON'T DO THIS: this.state.persons[0].name = 'Mogot';
+            // DON'T DO THIS: this.state.persons[0].name = 'Mogot';
+            // Replaces old state!
             setPersonsState({
                 persons: [
                     {name: 'Roderik', age: 27},
