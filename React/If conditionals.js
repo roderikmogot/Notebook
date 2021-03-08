@@ -53,7 +53,8 @@ class App extends Component {
             padding: '8px',
             cursor: 'pointer'
         };
-
+           
+        // Elegent way to create if conditionals
         let persons = null;
 
         if(this.state.showPersons){
