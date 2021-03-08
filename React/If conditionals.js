@@ -57,7 +57,7 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>Hi, I'm React App</h1>
-                <button style={styleCSS} onClick={this.nameToggleHandler}>Switch name</button>
+                <button style={styleCSS} onClick={this.nameToggleHandler}>Toggle name</button>
                 {this.state.showPersons === true ?
                     <div>
                         <Person
